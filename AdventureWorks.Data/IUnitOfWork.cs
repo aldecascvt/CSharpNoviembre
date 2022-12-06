@@ -8,6 +8,10 @@ namespace AdventureWorks.Data.Repository
 {
     public interface IUnitOfWork
     {
+        ICustomerRepository Customer { get; }
+        ICurrencyRepository Currency { get; }
+        ICurrencyRatesRepository CurrencyRate { get; }
+
         Task<int> SaveChangesAsync(CancellationToken cancellation=default(CancellationToken));
         void Save();
         int ExecuteSQLCommand(string sql, params object[] parameters);

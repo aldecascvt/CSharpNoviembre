@@ -22,4 +22,9 @@
     <ProjectReference Include="..\AdventureWorks.Shared\AdventureWorks.Shared.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+    <Folder Include="Views\" />
+  </ItemGroup>
+
 </Project>

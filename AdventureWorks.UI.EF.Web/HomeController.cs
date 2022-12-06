@@ -8,7 +8,7 @@ namespace AdventureWorks.UI.EF.Web
         // GET: HomeController
         public ActionResult Index()
         {
-            return View();
+            return View("");
         }
 
         // GET: HomeController/Details/5
@@ -46,6 +46,7 @@ namespace AdventureWorks.UI.EF.Web
 
         // POST: HomeController/Edit/5
         [HttpPost]
+        
         [ValidateAntiForgeryToken]
         public ActionResult Edit(int id, IFormCollection collection)
         {

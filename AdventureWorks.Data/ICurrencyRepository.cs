@@ -10,8 +10,8 @@ namespace AdventureWorks.Data.Repository
     public interface ICurrencyRepository : IRepository<Currency>
     {
         void Update(Currency obj);
-        IEnumerable<Currency> GetById(int id );
+        IEnumerable<Currency> GetById(string id );
         void Delete(Currency obj);
-
+        Currency GetCurrency(string id);
     }
 }

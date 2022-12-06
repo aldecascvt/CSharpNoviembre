@@ -19,7 +19,7 @@ namespace AdventureWorks.Data.Repository
         {
             _db.Currencies.Remove(obj);
         }
-        public IEnumerable<Currency> GetById(int id)
+        public IEnumerable<Currency> GetById(string id)
         {
             var result= _db.Currencies.Find(id);
             yield return result;
@@ -28,6 +28,10 @@ namespace AdventureWorks.Data.Repository
         {
             _db.Currencies.Update(obj);
         }
-
+        public Currency GetCurrency(string id)
+        {
+            var result =  _db.Currencies.Find(id);
+            return result;
+        }
     }
 }

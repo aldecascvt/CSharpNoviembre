@@ -16,8 +16,12 @@ namespace AdventureWorks.Data.Repository
         {
             _context = context;
             Customer = new CustomerRepository(_context);
+            Currency = new CurrencyRepository(_context);
+            CurrencyRate = new CurrencyRatesRatesRepository(_context);
         }
         public ICustomerRepository Customer { get; set; }
+        public ICurrencyRepository Currency { get; set; }
+        public ICurrencyRatesRepository CurrencyRate { get; set; }
 
 
         #region Metodos Unidad de Trabajo

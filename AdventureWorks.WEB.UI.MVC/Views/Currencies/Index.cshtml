@@ -1,0 +1,38 @@
+﻿@model IEnumerable<Adventureworks.Data.Currency>
+
+@{
+    ViewData["Title"] = "Listado de Divisas";
+}
+
+<h1>Inicio</h1>
+
+<p>
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.CurrencyCode)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Name)
+                </th>
+
+            </tr>
+        </thead>
+        <tbody>
+@foreach (var item in Model)
+{
+    <tr>
+        <td>@Html.DisplayFor(modelItem => item.CurrencyCode)    </td>
+        <td>@Html.DisplayFor(modelItem => item.Name)            </td>    
+    <td>
+        <a asp-action="Details" asp-route-id="@item.CurrencyCode">Detalle</a>
+    </td>
+    </tr>
+}
+
+        </tbody>
+
+    </table>
+
+</p>

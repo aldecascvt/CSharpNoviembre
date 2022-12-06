@@ -14,6 +14,7 @@ namespace Adventureworks.Data
         public AdventureWorksDbContext(DbContextOptions<AdventureWorksDbContext> options)
             : base(options)
         {
+            
         }
 
         public virtual DbSet<Address> Addresses { get; set; } = null!;
